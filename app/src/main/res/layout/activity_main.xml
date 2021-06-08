@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:background="@color/backcolor"
+    android:backgroundTint="@color/backcolor"
+    android:layout_width="match_parent"
+    >
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:viewBindingIgnore="true"
+    android:background="#EAF3EA"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/jacques_francois"
+        android:text="Welcome,"
+        android:textColor="@color/lightgreen"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/jacques_francois"
+        android:text="Sign in to Continue!"
+        android:textColor="#676464"
+
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+
+        android:id="@+id/id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/newh"
+        android:fontFamily="@font/jacques_francois"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="#676464" />
+
+    <EditText
+
+        android:id="@+id/pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/newh"
+        android:fontFamily="@font/jacques_francois"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="#676464" />
+
+    <Button
+        android:id="@+id/logiin"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/styl"
+        android:text="Login"
+        android:onClick="LoginClicked"
+        android:textColor="#676464"
+        app:backgroundTint="@color/lightgreen"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/mobno"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="clip_horizontal"
+
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/styl"
+            android:onClick="phonelogin"
+            android:text="Login with Phone"
+            android:textColor="#676464"
+            app:backgroundTint="@color/lightgreen"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:text="or"
+            android:textColor="#676464"
+            android:textSize="25sp"
+
+            />
+        <ImageView
+            android:id="@+id/google"
+            android:layout_width="100sp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:src="@drawable/googlen"
+
+            />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/jacques_francois"
+            android:text="Not Registered yet?"
+            android:textColor="#676464"
+            android:layout_marginBottom="20dp"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/jacques_francois"
+            android:onClick="signup"
+            android:text="SignUp"
+            android:textColor="@color/lightgreen"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            tools:ignore="OnClick" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+</ScrollView>
