@@ -1,11 +1,48 @@
 package com.example.sellall.AdapterData;
 
+import com.google.firebase.database.DatabaseReference;
+
 import java.util.ArrayList;
+import java.util.Map;
 
 public class UserSellData {
     public UserSellData(){}
-    String itemname,quantity,contactno,address,pincode,personname;
+    String itemname,quantity,contactno,address,pincode,personname,postid,uid,likes;
+    ArrayList<DatabaseReference> dbr=new ArrayList<>();
+
+    public ArrayList<DatabaseReference> getDbr() {
+        return dbr;
+    }
+
+    public void setDbr(ArrayList<DatabaseReference> dbr) {
+        this.dbr = dbr;
+    }
+
     ArrayList<String> a=new ArrayList<>();
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    public String getLikes() {
+        return likes;
+    }
+
+    public void setLikes(String likes) {
+        this.likes = likes;
+    }
+
+    public String getPostid() {
+        return postid;
+    }
+
+    public void setPostid(String postid) {
+        this.postid = postid;
+    }
 
     public UserSellData(String itemname, String quantity, String contactno, String address, String pincode) {
         this.itemname = itemname;

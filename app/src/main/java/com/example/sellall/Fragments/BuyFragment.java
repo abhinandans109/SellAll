@@ -60,8 +60,8 @@ public class BuyFragment extends Fragment {
 
         // Inflate the layout for this fragment
         b =FragmentBuyBinding.inflate(inflater, container, false);
-       fd= FirebaseDatabase.getInstance().getReference("UserSellData");
-       fd1= FirebaseDatabase.getInstance().getReference("Users");
+           fd= FirebaseDatabase.getInstance().getReference("UserSellData");
+           fd1= FirebaseDatabase.getInstance().getReference("Users");
         recyclerView= b.recyclerview;
         Toast.makeText(getContext(), "Welcome To SellAll", Toast.LENGTH_SHORT).show();
         list=new ArrayList<>();
@@ -78,12 +78,13 @@ public class BuyFragment extends Fragment {
 
                 for(DataSnapshot d:snapshot.getChildren()){
                     UserSellData u = d.getValue(UserSellData.class);
-
+                    u.setPostid(d.getKey());
+                    u.setUid(snapshot.getKey());
                     fd1.child(snapshot.getKey()).child("name").addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot1) {
+
                             String s = snapshot1.getValue(String.class);
-//                            Toast.makeText(getContext(), s, Toast.LENGTH_SHORT).show();
                             u.setPersonname(s);
                             adapter.notifyDataSetChanged();
 

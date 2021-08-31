@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backcolor"
+    tools:context=".comments">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/comentrecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/mehuu"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+         />
+    <RelativeLayout
+        android:id="@+id/mehuu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="4dp"
+        >
+
+        <EditText
+            android:id="@+id/commentText"
+            android:layout_width="293dp"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/comment"
+            android:layout_toLeftOf="@+id/comment"
+            android:background="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/jacques_francois"
+            android:hint="Enter Comment"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="#676464" />
+
+        <Button
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:padding="10dp"
+            android:text="comment"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</RelativeLayout>

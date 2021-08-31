@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SellAll">
-        <activity android:name=".ImageClicked"></activity>
+        <activity android:name=".comments"></activity>
+        <activity android:name=".ImageClicked" />
         <activity android:name=".Adapters.MyPosts" />
         <activity android:name=".profile" />
         <activity android:name=".LoggedInToApp" />
