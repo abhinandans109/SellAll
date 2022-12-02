@@ -20,6 +20,7 @@ import com.example.sellall.LoggedInToApp;
 import com.example.sellall.AdapterData.UserSellData;
 import com.example.sellall.databinding.FragmentSellBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -91,6 +92,11 @@ public class SellFragment extends Fragment {
                             Toast.makeText(getContext(), "Post Created Successfully", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getContext(), LoggedInToApp.class));
                         }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(getContext(),e.getLocalizedMessage(),Toast.LENGTH_SHORT).show();
+                        }
                     });
                 }
             }
@@ -104,7 +110,7 @@ public class SellFragment extends Fragment {
         super.onActivityResult(requestCode, resultCode, data);
         pd.show();
         if(requestCode==RC && resultCode== Activity.RESULT_OK) {
-
+            b.itemimage.setImageURI(data.getData());
             if(data.getClipData()!=null){
 
                 ClipData u = data.getClipData();
